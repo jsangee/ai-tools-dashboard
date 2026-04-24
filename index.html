@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Development Landscape for Business Leaders</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        header {
+            background: white;
+            padding: 40px;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+            margin-bottom: 30px;
+            text-align: center;
+        }
+
+        h1 {
+            color: #667eea;
+            font-size: 2.5em;
+            margin-bottom: 10px;
+        }
+
+        .subtitle {
+            color: #666;
+            font-size: 1.2em;
+        }
+
+        .nav-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+            margin-bottom: 30px;
+            position: sticky;
+            top: 20px;
+            z-index: 100;
+            background: rgba(102, 126, 234, 0.95);
+            padding: 20px;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+            backdrop-filter: blur(10px);
+        }
+
+        .nav-button {
+            background: white;
+            padding: 15px;
+            border-radius: 12px;
+            text-align: center;
+            text-decoration: none;
+            color: #667eea;
+            font-weight: bold;
+            font-size: 1em;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+            transition: transform 0.3s, box-shadow 0.3s, background 0.3s;
+        }
+
+        .nav-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+            background: #f0f4ff;
+        }
+
+        .tool-card {
+            background: white;
+            padding: 40px;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+            margin-bottom: 30px;
+            scroll-margin-top: 20px;
+        }
+
+        .tool-card h2 {
+            color: #667eea;
+            font-size: 2em;
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .icon {
+            font-size: 1.2em;
+        }
+
+        .one-liner {
+            background: #f0f4ff;
+            padding: 15px 20px;
+            border-left: 5px solid #667eea;
+            font-size: 1.2em;
+            font-weight: 500;
+            margin-bottom: 25px;
+            border-radius: 5px;
+        }
+
+        .section {
+            margin-bottom: 25px;
+        }
+
+        .section h3 {
+            color: #764ba2;
+            font-size: 1.3em;
+            margin-bottom: 10px;
+        }
+
+        .section p {
+            font-size: 1.05em;
+            color: #555;
+            line-height: 1.8;
+        }
+
+        .analogy {
+            background: #fff9e6;
+            padding: 20px;
+            border-radius: 10px;
+            border-left: 5px solid #ffc107;
+            font-style: italic;
+        }
+
+        .analogy strong {
+            color: #f57c00;
+        }
+
+        .section ul {
+            margin-left: 25px;
+            margin-top: 10px;
+            line-height: 1.8;
+        }
+
+        .section ul li {
+            margin-bottom: 10px;
+        }
+
+        footer {
+            text-align: center;
+            color: white;
+            padding: 30px;
+            font-size: 0.9em;
+        }
+
+        /* Mobile responsiveness */
+        @media (max-width: 768px) {
+            body {
+                padding: 10px;
+            }
+
+            header {
+                padding: 25px;
+            }
+
+            h1 {
+                font-size: 1.8em;
+            }
+
+            .subtitle {
+                font-size: 1em;
+            }
+
+            .tool-card {
+                padding: 25px;
+            }
+
+            .tool-card h2 {
+                font-size: 1.5em;
+            }
+
+            .nav-grid {
+                grid-template-columns: 1fr;
+                top: 10px;
+                padding: 15px;
+            }
+
+            .nav-button {
+                padding: 12px;
+                font-size: 0.9em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>AI Development Landscape</h1>
+            <p class="subtitle">A Plain-English Guide for Business Leaders</p>
+        </header>
+
+        <nav class="nav-grid">
+            <a href="#claude" class="nav-button">🤖 Claude</a>
+            <a href="#vscode" class="nav-button">💻 VS Code</a>
+            <a href="#cursor" class="nav-button">✨ Cursor</a>
+            <a href="#terminal" class="nav-button">⌨️ Terminal</a>
+            <a href="#workspace" class="nav-button">📁 Workspace</a>
+            <a href="#salesforce-cli" class="nav-button">☁️ Salesforce CLI</a>
+            <a href="#salesforce-claude" class="nav-button">🏢 Salesforce + Claude</a>
+        </nav>
+
+        <!-- Claude Section -->
+        <div class="tool-card" id="claude">
+            <h2><span class="icon">🤖</span> Claude</h2>
+            <div class="one-liner">
+                An AI assistant that understands context, writes code, analyzes data, and helps solve complex problems through conversation.
+            </div>
+
+            <div class="section">
+                <h3>What it does</h3>
+                <p>
+                    Claude is an AI assistant developed by Anthropic that you can have natural conversations with. Think of it as a highly knowledgeable colleague who can write documents, analyze information, write and debug code, explain complex concepts, and help you think through problems. Unlike simple chatbots, Claude understands nuance, maintains context throughout long conversations, and can handle sophisticated tasks like reviewing contracts, writing technical documentation, or architecting software solutions.
+                </p>
+            </div>
+
+            <div class="section">
+                <h3>Why it matters for me</h3>
+                <p>
+                    As a director, Claude can dramatically accelerate your team's productivity. It can help draft RFP responses, review technical proposals, explain technical concepts to non-technical stakeholders, analyze project risks, generate project documentation, and even help with code reviews. It's particularly valuable because it can work across different domains—business strategy, technical implementation, and communication—making it a versatile tool for leadership. Many organizations are integrating AI assistants like Claude into their workflows to reduce repetitive work and free up humans for higher-value decision-making.
+                </p>
+            </div>
+
+            <div class="analogy">
+                <strong>Analogy:</strong> Claude is like having a brilliant consultant who never sleeps, never forgets what you discussed, and can instantly switch between being a lawyer, engineer, writer, or strategist depending on what you need—all in the same conversation.
+            </div>
+        </div>
+
+        <!-- VS Code Section -->
+        <div class="tool-card" id="vscode">
+            <h2><span class="icon">💻</span> VS Code (Visual Studio Code)</h2>
+            <div class="one-liner">
+                A free, powerful text editor that's become the industry standard for writing and managing code.
+            </div>
+
+            <div class="section">
+                <h3>What it does</h3>
+                <p>
+                    VS Code is a sophisticated text editor built by Microsoft specifically for writing code. But it's far more than just a notepad—it understands different programming languages, highlights syntax to make code readable, catches errors before you run the code, suggests completions as you type, and integrates with thousands of tools through extensions. It can connect to databases, cloud services, version control systems, and testing frameworks. Think of it as the central workspace where developers spend most of their day.
+                </p>
+            </div>
+
+            <div class="section">
+                <h3>Why it matters for me</h3>
+                <p>
+                    Understanding VS Code helps you grasp how modern development works. When your team talks about "extensions," "debugging," or "IntelliSense," they're referring to VS Code features. It's free and cross-platform (Windows, Mac, Linux), which means your entire team can use the same tools regardless of their hardware. It's also highly customizable, so your developers can optimize it for your specific tech stack. When evaluating project timelines or tooling costs, knowing that VS Code is the foundation helps you understand what's realistic and what additional tools might be needed.
+                </p>
+            </div>
+
+            <div class="analogy">
+                <strong>Analogy:</strong> VS Code is like a high-end architect's drafting table with built-in measuring tools, automatic error-checking, and the ability to connect to every supplier and contractor you might need—all in one workspace. It's where the blueprints (code) get created and refined.
+            </div>
+        </div>
+
+        <!-- Cursor Section -->
+        <div class="tool-card" id="cursor">
+            <h2><span class="icon">✨</span> Cursor</h2>
+            <div class="one-liner">
+                An AI-powered code editor built on VS Code that lets you code by having conversations with AI.
+            </div>
+
+            <div class="section">
+                <h3>What it does</h3>
+                <p>
+                    Cursor takes everything great about VS Code and adds deeply integrated AI capabilities. Instead of just writing code manually, you can describe what you want in plain English, and Cursor's AI will generate, modify, or explain the code for you. It can understand your entire codebase, suggest changes across multiple files, catch bugs before they happen, and even refactor complex code. The AI assistant sees what you're working on and can proactively suggest improvements. It's like having an expert pair programmer sitting next to you at all times.
+                </p>
+            </div>
+
+            <div class="section">
+                <h3>Why it matters for me</h3>
+                <p>
+                    Cursor represents a fundamental shift in how software gets built. For non-technical leaders or those learning to code, it dramatically lowers the barrier to entry—you can build functional applications by describing what you want rather than memorizing syntax. For experienced developers, it multiplies productivity by handling boilerplate code, catching edge cases, and speeding up debugging. When evaluating team composition or project feasibility, knowing that AI-assisted tools like Cursor exist means smaller teams can accomplish more, and non-developers can contribute more directly to technical projects. This is the future of development—AI and humans collaborating.
+                </p>
+            </div>
+
+            <div class="analogy">
+                <strong>Analogy:</strong> If VS Code is the architect's drafting table, Cursor is that same table but with an expert architect standing next to you, watching what you draw, suggesting better approaches, fixing mistakes in real-time, and sometimes just taking the pencil and drawing exactly what you described verbally.
+            </div>
+        </div>
+
+        <!-- Terminal Section -->
+        <div class="tool-card" id="terminal">
+            <h2><span class="icon">⌨️</span> Terminal / Command Line Interface (CLI)</h2>
+            <div class="one-liner">
+                A text-based interface for giving direct commands to your computer—no mouse, no graphics, just typed instructions.
+            </div>
+
+            <div class="section">
+                <h3>What it does</h3>
+                <p>
+                    The terminal (also called command line, shell, or CLI) is a window where you type commands directly to your operating system. Instead of clicking through folders and menus, you type instructions like "create a new folder," "run this program," or "connect to that server." Developers use it because it's faster, more powerful, and automatable—you can write scripts to perform hundreds of actions in sequence. Many development tools and cloud services only work through the command line. Common commands include <code>cd</code> (change directory), <code>ls</code> or <code>dir</code> (list files), <code>mkdir</code> (make directory), and <code>git</code> (version control).
+                </p>
+            </div>
+
+            <div class="section">
+                <h3>Why it matters for me</h3>
+                <p>
+                    Understanding the terminal helps you appreciate what developers mean by "efficiency" and "automation." When your team talks about CI/CD pipelines, deployment scripts, or running tests, they're often describing terminal commands running automatically. For you personally, learning a few basic commands (like navigating folders, viewing files, or running scripts) can make you more self-sufficient and help you troubleshoot simple issues without waiting for technical help. It also demystifies technical conversations—when someone says "just SSH into the server and check the logs," you'll know what they mean.
+                </p>
+            </div>
+
+            <div class="analogy">
+                <strong>Analogy:</strong> The terminal is like texting your computer instead of tapping through apps. Instead of opening a file manager app and clicking through folders, you just text "show me what's in the Documents folder" and instantly get the answer. It's direct communication—no middleman interface, which makes it both powerful and unforgiving if you type the wrong thing.
+            </div>
+        </div>
+
+        <!-- Workspace Section -->
+        <div class="tool-card" id="workspace">
+            <h2><span class="icon">📁</span> Workspace</h2>
+            <div class="one-liner">
+                An organized folder containing all the files, code, and resources for a specific project—your project's home base.
+            </div>
+
+            <div class="section">
+                <h3>What it does</h3>
+                <p>
+                    A workspace is a designated folder on your computer where all the files for a particular project live together. When you open a workspace in VS Code or Cursor, the editor understands the entire project structure—where your code is, what libraries you're using, how files connect to each other, and your project-specific settings. It's not just a folder—it's a configured environment that remembers your preferences, keeps track of recent changes, and helps tools like Claude understand the full context of what you're building. You might have separate workspaces for different clients, products, or initiatives.
+                </p>
+            </div>
+
+            <div class="section">
+                <h3>Why it matters for me</h3>
+                <p>
+                    Workspaces are how developers organize their work and maintain boundaries between different projects. When you hear "open the workspace," it means loading the entire project environment—not just one file. For you as a director, understanding workspaces helps you see how projects are structured and why switching between projects takes a moment (you're loading an entire context, not just one document). It also explains why giving AI tools like Claude access to a workspace is powerful—Claude can see the whole picture, understand relationships between files, and make better suggestions because it knows the full project context, not just isolated snippets.
+                </p>
+            </div>
+
+            <div class="analogy">
+                <strong>Analogy:</strong> A workspace is like a war room for a specific initiative. All the blueprints, contracts, team notes, and resources for that project are pinned to the walls. When you walk into that room, everything you need is there, organized exactly how your team left it. You wouldn't mix the war room for Project A with Project B—each gets its own dedicated space with its own context.
+            </div>
+        </div>
+
+        <!-- Salesforce CLI Section -->
+        <div class="tool-card" id="salesforce-cli">
+            <h2><span class="icon">☁️</span> Salesforce CLI (sf / sfdx)</h2>
+            <div class="one-liner">
+                A command-line tool that lets developers interact with Salesforce orgs directly from their terminal—no clicking through the web interface.
+            </div>
+
+            <div class="section">
+                <h3>What it does</h3>
+                <p>
+                    The Salesforce CLI is a specialized command-line tool built by Salesforce for developers working on the Salesforce platform. It allows you to create scratch orgs (temporary Salesforce environments for testing), deploy code to orgs, retrieve metadata, run tests, query data, and automate repetitive tasks—all from the terminal. Instead of logging into Salesforce and clicking through Setup, developers can type commands like <code>sf org create scratch</code> or <code>sf project deploy start</code> to get work done faster. It integrates tightly with developer workflows and CI/CD pipelines. The commands start with either <code>sf</code> (newer version) or <code>sfdx</code> (legacy version).
+                </p>
+            </div>
+
+            <div class="section">
+                <h3>Why it matters for me</h3>
+                <p>
+                    The Salesforce CLI represents the shift from manual, click-based Salesforce administration to automated, code-based development. When your team talks about "DevOps," "CI/CD," or "source control" for Salesforce projects, the CLI is often the foundation. It enables developers to version control their Salesforce configurations, automate deployments between environments (dev → test → production), and work locally on their machines before pushing changes to the cloud. For you, understanding the CLI means you can appreciate the difference between traditional admin work (clicking in Setup) and modern development practices (scripted, repeatable, testable). It also helps you understand project velocity—teams using the CLI can move much faster than those relying solely on manual processes.
+                </p>
+            </div>
+
+            <div class="analogy">
+                <strong>Analogy:</strong> If Salesforce Setup is like manually configuring every light switch and thermostat in a building by walking around with a clipboard, the Salesforce CLI is like having a central control panel where you can script all those settings, save them, and instantly replicate them across dozens of buildings—fast, consistent, and reversible.
+            </div>
+        </div>
+
+        <!-- Salesforce Claude Strategy Section -->
+        <div class="tool-card" id="salesforce-claude">
+            <h2><span class="icon">🏢</span> How Salesforce Wants You to Use Claude</h2>
+            <div class="one-liner">
+                Salesforce is making Claude available to everyone—not just engineers—but through your IDE, not as a standalone app.
+            </div>
+
+            <div class="section">
+                <h3>What it does</h3>
+                <p>
+                    Salesforce leadership (including Srini Tallapragada) has announced that Claude is now available company-wide, not just for engineering teams. However, the strategic direction is to use Claude <strong>inside your development environment</strong> (VS Code, Cursor, or other IDEs) rather than the standalone desktop app or browser version at claude.ai. This approach keeps Claude connected to your workspace, giving it full context of the code and files you're working with. The IDE integration means Claude can read your project files, suggest edits directly in your code, understand your Salesforce org metadata, and help you build solutions while staying inside your primary work environment.
+                </p>
+            </div>
+
+            <div class="section">
+                <h3>Why it matters for me</h3>
+                <p>
+                    This isn't just a tooling preference—it's a strategic shift in how Salesforce expects all employees (technical and non-technical) to work. By embedding Claude in the IDE, Salesforce is encouraging everyone to think more like developers: working with code in context, building solutions iteratively, and leveraging AI that understands your entire project—not just isolated questions. For directors and business leaders, this means:
+                </p>
+                <ul style="margin-left: 25px; margin-top: 10px; line-height: 1.8;">
+                    <li><strong>Context-aware assistance:</strong> Claude sees your Salesforce metadata, your project documents, your org configuration—so its suggestions are specific to your actual work, not generic.</li>
+                    <li><strong>Democratized development:</strong> Non-engineers can now build functional solutions (flows, automation, reports) by describing what they need in plain English while Claude handles the technical syntax.</li>
+                    <li><strong>Unified workflow:</strong> Instead of switching between browser tabs, Slack, Claude.ai, and your IDE, everything happens in one place—making you faster and reducing context switching.</li>
+                    <li><strong>Enterprise governance:</strong> When Claude runs inside your IDE connected to Salesforce systems, the company can better manage security, compliance, and data access compared to standalone web apps.</li>
+                </ul>
+                <p style="margin-top: 15px;">
+                    The message from leadership is clear: this is how modern work gets done at Salesforce. Learning to work in an IDE with Claude isn't optional—it's becoming the standard way to operate, regardless of your role. The barrier to entry is lower than you think, and the productivity gains are substantial once you make the shift.
+                </p>
+            </div>
+
+            <div class="analogy">
+                <strong>Analogy:</strong> Think of it this way: the browser version of Claude is like calling a consultant on the phone and describing your problem from memory. Claude in your IDE is like inviting that consultant into your office, showing them all your files, spreadsheets, and systems, and having them work alongside you with full visibility—they can see what you see, edit directly in your documents, and give advice that's grounded in your actual situation, not abstract scenarios.
+            </div>
+        </div>
+
+        <footer>
+            <p>Built for business leaders navigating the AI development landscape</p>
+            <p style="margin-top: 10px; font-size: 0.8em;">Last updated: April 2026</p>
+        </footer>
+    </div>
+</body>
+</html>
