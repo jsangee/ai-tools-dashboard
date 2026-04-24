@@ -45,9 +45,45 @@
             font-size: 1.2em;
         }
 
+        .gdc-callout {
+            background: linear-gradient(135deg, #1798c1 0%, #0b5394 100%);
+            color: white;
+            padding: 25px;
+            border-radius: 15px;
+            margin-bottom: 30px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+        }
+
+        .gdc-callout h3 {
+            font-size: 1.3em;
+            margin-bottom: 10px;
+        }
+
+        .gdc-callout p {
+            font-size: 1.05em;
+            margin-bottom: 15px;
+            line-height: 1.6;
+        }
+
+        .gdc-callout a {
+            display: inline-block;
+            background: white;
+            color: #0b5394;
+            padding: 12px 25px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .gdc-callout a:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+        }
+
         .nav-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
             gap: 15px;
             margin-bottom: 30px;
             position: sticky;
@@ -149,6 +185,45 @@
             margin-bottom: 10px;
         }
 
+        .additional-context {
+            background: white;
+            padding: 40px;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+            margin-bottom: 30px;
+        }
+
+        .additional-context h2 {
+            color: #667eea;
+            font-size: 1.8em;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        .context-item {
+            background: #f8f9fa;
+            padding: 25px;
+            border-radius: 15px;
+            margin-bottom: 20px;
+            border-left: 4px solid #667eea;
+        }
+
+        .context-item h3 {
+            color: #667eea;
+            font-size: 1.4em;
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .context-item p {
+            color: #555;
+            font-size: 1em;
+            line-height: 1.6;
+            margin-bottom: 10px;
+        }
+
         footer {
             text-align: center;
             color: white;
@@ -192,6 +267,18 @@
                 padding: 12px;
                 font-size: 0.9em;
             }
+
+            .gdc-callout {
+                padding: 20px;
+            }
+
+            .additional-context {
+                padding: 25px;
+            }
+
+            .context-item {
+                padding: 20px;
+            }
         }
     </style>
 </head>
@@ -200,43 +287,23 @@
         <header>
             <h1>AI Development Landscape</h1>
             <p class="subtitle">A Plain-English Guide for Business Leaders</p>
+            <p class="subtitle" style="font-size: 0.9em; margin-top: 10px; color: #888;">Tools arranged from foundational to AI-powered</p>
         </header>
 
+        <!-- GDC Canvas Callout -->
+        <div class="gdc-callout">
+            <h3>🎯 GDC Tooling Reference</h3>
+            <p>Want more information on all the tools we use at GDC? Check out our comprehensive canvas:</p>
+            <a href="https://salesforce.enterprise.slack.com/docs/T01G0063H29/F098QG89VM4" target="_blank">View GDC Tools Canvas →</a>
+        </div>
+
         <nav class="nav-grid">
-            <a href="#claude" class="nav-button">🤖 Claude</a>
             <a href="#vscode" class="nav-button">💻 VS Code</a>
-            <a href="#cursor" class="nav-button">✨ Cursor</a>
-            <a href="#terminal" class="nav-button">⌨️ Terminal</a>
-            <a href="#workspace" class="nav-button">📁 Workspace</a>
             <a href="#salesforce-cli" class="nav-button">☁️ Salesforce CLI</a>
+            <a href="#cursor" class="nav-button">✨ Cursor</a>
+            <a href="#claude" class="nav-button">🤖 Claude</a>
             <a href="#salesforce-claude" class="nav-button">🏢 Salesforce + Claude</a>
         </nav>
-
-        <!-- Claude Section -->
-        <div class="tool-card" id="claude">
-            <h2><span class="icon">🤖</span> Claude</h2>
-            <div class="one-liner">
-                An AI assistant that understands context, writes code, analyzes data, and helps solve complex problems through conversation.
-            </div>
-
-            <div class="section">
-                <h3>What it does</h3>
-                <p>
-                    Claude is an AI assistant developed by Anthropic that you can have natural conversations with. Think of it as a highly knowledgeable colleague who can write documents, analyze information, write and debug code, explain complex concepts, and help you think through problems. Unlike simple chatbots, Claude understands nuance, maintains context throughout long conversations, and can handle sophisticated tasks like reviewing contracts, writing technical documentation, or architecting software solutions.
-                </p>
-            </div>
-
-            <div class="section">
-                <h3>Why it matters for me</h3>
-                <p>
-                    As a director, Claude can dramatically accelerate your team's productivity. It can help draft RFP responses, review technical proposals, explain technical concepts to non-technical stakeholders, analyze project risks, generate project documentation, and even help with code reviews. It's particularly valuable because it can work across different domains—business strategy, technical implementation, and communication—making it a versatile tool for leadership. Many organizations are integrating AI assistants like Claude into their workflows to reduce repetitive work and free up humans for higher-value decision-making.
-                </p>
-            </div>
-
-            <div class="analogy">
-                <strong>Analogy:</strong> Claude is like having a brilliant consultant who never sleeps, never forgets what you discussed, and can instantly switch between being a lawyer, engineer, writer, or strategist depending on what you need—all in the same conversation.
-            </div>
-        </div>
 
         <!-- VS Code Section -->
         <div class="tool-card" id="vscode">
@@ -261,6 +328,32 @@
 
             <div class="analogy">
                 <strong>Analogy:</strong> VS Code is like a high-end architect's drafting table with built-in measuring tools, automatic error-checking, and the ability to connect to every supplier and contractor you might need—all in one workspace. It's where the blueprints (code) get created and refined.
+            </div>
+        </div>
+
+        <!-- Salesforce CLI Section -->
+        <div class="tool-card" id="salesforce-cli">
+            <h2><span class="icon">☁️</span> Salesforce CLI (sf / sfdx)</h2>
+            <div class="one-liner">
+                A command-line tool that lets developers interact with Salesforce orgs directly from their terminal—no clicking through the web interface.
+            </div>
+
+            <div class="section">
+                <h3>What it does</h3>
+                <p>
+                    The Salesforce CLI is a specialized command-line tool built by Salesforce for developers working on the Salesforce platform. It allows you to create scratch orgs (temporary Salesforce environments for testing), deploy code to orgs, retrieve metadata, run tests, query data, and automate repetitive tasks—all from the terminal. Instead of logging into Salesforce and clicking through Setup, developers can type commands like <code>sf org create scratch</code> or <code>sf project deploy start</code> to get work done faster. It integrates tightly with developer workflows and CI/CD pipelines. The commands start with either <code>sf</code> (newer version) or <code>sfdx</code> (legacy version).
+                </p>
+            </div>
+
+            <div class="section">
+                <h3>Why it matters for me</h3>
+                <p>
+                    The Salesforce CLI represents the shift from manual, click-based Salesforce administration to automated, code-based development. When your team talks about "DevOps," "CI/CD," or "source control" for Salesforce projects, the CLI is often the foundation. It enables developers to version control their Salesforce configurations, automate deployments between environments (dev → test → production), and work locally on their machines before pushing changes to the cloud. For you, understanding the CLI means you can appreciate the difference between traditional admin work (clicking in Setup) and modern development practices (scripted, repeatable, testable). It also helps you understand project velocity—teams using the CLI can move much faster than those relying solely on manual processes.
+                </p>
+            </div>
+
+            <div class="analogy">
+                <strong>Analogy:</strong> If Salesforce Setup is like manually configuring every light switch and thermostat in a building by walking around with a clipboard, the Salesforce CLI is like having a central control panel where you can script all those settings, save them, and instantly replicate them across dozens of buildings—fast, consistent, and reversible.
             </div>
         </div>
 
@@ -290,81 +383,29 @@
             </div>
         </div>
 
-        <!-- Terminal Section -->
-        <div class="tool-card" id="terminal">
-            <h2><span class="icon">⌨️</span> Terminal / Command Line Interface (CLI)</h2>
+        <!-- Claude Section -->
+        <div class="tool-card" id="claude">
+            <h2><span class="icon">🤖</span> Claude</h2>
             <div class="one-liner">
-                A text-based interface for giving direct commands to your computer—no mouse, no graphics, just typed instructions.
+                An AI assistant that understands context, writes code, analyzes data, and helps solve complex problems through conversation.
             </div>
 
             <div class="section">
                 <h3>What it does</h3>
                 <p>
-                    The terminal (also called command line, shell, or CLI) is a window where you type commands directly to your operating system. Instead of clicking through folders and menus, you type instructions like "create a new folder," "run this program," or "connect to that server." Developers use it because it's faster, more powerful, and automatable—you can write scripts to perform hundreds of actions in sequence. Many development tools and cloud services only work through the command line. Common commands include <code>cd</code> (change directory), <code>ls</code> or <code>dir</code> (list files), <code>mkdir</code> (make directory), and <code>git</code> (version control).
+                    Claude is an AI assistant developed by Anthropic that you can have natural conversations with. Think of it as a highly knowledgeable colleague who can write documents, analyze information, write and debug code, explain complex concepts, and help you think through problems. Unlike simple chatbots, Claude understands nuance, maintains context throughout long conversations, and can handle sophisticated tasks like reviewing contracts, writing technical documentation, or architecting software solutions.
                 </p>
             </div>
 
             <div class="section">
                 <h3>Why it matters for me</h3>
                 <p>
-                    Understanding the terminal helps you appreciate what developers mean by "efficiency" and "automation." When your team talks about CI/CD pipelines, deployment scripts, or running tests, they're often describing terminal commands running automatically. For you personally, learning a few basic commands (like navigating folders, viewing files, or running scripts) can make you more self-sufficient and help you troubleshoot simple issues without waiting for technical help. It also demystifies technical conversations—when someone says "just SSH into the server and check the logs," you'll know what they mean.
+                    As a director, Claude can dramatically accelerate your team's productivity. It can help draft RFP responses, review technical proposals, explain technical concepts to non-technical stakeholders, analyze project risks, generate project documentation, and even help with code reviews. It's particularly valuable because it can work across different domains—business strategy, technical implementation, and communication—making it a versatile tool for leadership. Many organizations are integrating AI assistants like Claude into their workflows to reduce repetitive work and free up humans for higher-value decision-making.
                 </p>
             </div>
 
             <div class="analogy">
-                <strong>Analogy:</strong> The terminal is like texting your computer instead of tapping through apps. Instead of opening a file manager app and clicking through folders, you just text "show me what's in the Documents folder" and instantly get the answer. It's direct communication—no middleman interface, which makes it both powerful and unforgiving if you type the wrong thing.
-            </div>
-        </div>
-
-        <!-- Workspace Section -->
-        <div class="tool-card" id="workspace">
-            <h2><span class="icon">📁</span> Workspace</h2>
-            <div class="one-liner">
-                An organized folder containing all the files, code, and resources for a specific project—your project's home base.
-            </div>
-
-            <div class="section">
-                <h3>What it does</h3>
-                <p>
-                    A workspace is a designated folder on your computer where all the files for a particular project live together. When you open a workspace in VS Code or Cursor, the editor understands the entire project structure—where your code is, what libraries you're using, how files connect to each other, and your project-specific settings. It's not just a folder—it's a configured environment that remembers your preferences, keeps track of recent changes, and helps tools like Claude understand the full context of what you're building. You might have separate workspaces for different clients, products, or initiatives.
-                </p>
-            </div>
-
-            <div class="section">
-                <h3>Why it matters for me</h3>
-                <p>
-                    Workspaces are how developers organize their work and maintain boundaries between different projects. When you hear "open the workspace," it means loading the entire project environment—not just one file. For you as a director, understanding workspaces helps you see how projects are structured and why switching between projects takes a moment (you're loading an entire context, not just one document). It also explains why giving AI tools like Claude access to a workspace is powerful—Claude can see the whole picture, understand relationships between files, and make better suggestions because it knows the full project context, not just isolated snippets.
-                </p>
-            </div>
-
-            <div class="analogy">
-                <strong>Analogy:</strong> A workspace is like a war room for a specific initiative. All the blueprints, contracts, team notes, and resources for that project are pinned to the walls. When you walk into that room, everything you need is there, organized exactly how your team left it. You wouldn't mix the war room for Project A with Project B—each gets its own dedicated space with its own context.
-            </div>
-        </div>
-
-        <!-- Salesforce CLI Section -->
-        <div class="tool-card" id="salesforce-cli">
-            <h2><span class="icon">☁️</span> Salesforce CLI (sf / sfdx)</h2>
-            <div class="one-liner">
-                A command-line tool that lets developers interact with Salesforce orgs directly from their terminal—no clicking through the web interface.
-            </div>
-
-            <div class="section">
-                <h3>What it does</h3>
-                <p>
-                    The Salesforce CLI is a specialized command-line tool built by Salesforce for developers working on the Salesforce platform. It allows you to create scratch orgs (temporary Salesforce environments for testing), deploy code to orgs, retrieve metadata, run tests, query data, and automate repetitive tasks—all from the terminal. Instead of logging into Salesforce and clicking through Setup, developers can type commands like <code>sf org create scratch</code> or <code>sf project deploy start</code> to get work done faster. It integrates tightly with developer workflows and CI/CD pipelines. The commands start with either <code>sf</code> (newer version) or <code>sfdx</code> (legacy version).
-                </p>
-            </div>
-
-            <div class="section">
-                <h3>Why it matters for me</h3>
-                <p>
-                    The Salesforce CLI represents the shift from manual, click-based Salesforce administration to automated, code-based development. When your team talks about "DevOps," "CI/CD," or "source control" for Salesforce projects, the CLI is often the foundation. It enables developers to version control their Salesforce configurations, automate deployments between environments (dev → test → production), and work locally on their machines before pushing changes to the cloud. For you, understanding the CLI means you can appreciate the difference between traditional admin work (clicking in Setup) and modern development practices (scripted, repeatable, testable). It also helps you understand project velocity—teams using the CLI can move much faster than those relying solely on manual processes.
-                </p>
-            </div>
-
-            <div class="analogy">
-                <strong>Analogy:</strong> If Salesforce Setup is like manually configuring every light switch and thermostat in a building by walking around with a clipboard, the Salesforce CLI is like having a central control panel where you can script all those settings, save them, and instantly replicate them across dozens of buildings—fast, consistent, and reversible.
+                <strong>Analogy:</strong> Claude is like having a brilliant consultant who never sleeps, never forgets what you discussed, and can instantly switch between being a lawyer, engineer, writer, or strategist depending on what you need—all in the same conversation.
             </div>
         </div>
 
@@ -400,6 +441,37 @@
 
             <div class="analogy">
                 <strong>Analogy:</strong> Think of it this way: the browser version of Claude is like calling a consultant on the phone and describing your problem from memory. Claude in your IDE is like inviting that consultant into your office, showing them all your files, spreadsheets, and systems, and having them work alongside you with full visibility—they can see what you see, edit directly in your documents, and give advice that's grounded in your actual situation, not abstract scenarios.
+            </div>
+        </div>
+
+        <!-- Additional Context Section -->
+        <div class="additional-context">
+            <h2>📚 Additional Context: Foundational Concepts</h2>
+
+            <div class="context-item">
+                <h3><span class="icon">📁</span> Workspace</h3>
+                <p>
+                    <strong>What it is:</strong> An organized folder containing all the files, code, and resources for a specific project—your project's home base.
+                </p>
+                <p>
+                    <strong>Why it matters:</strong> When you open a workspace in VS Code or Cursor, the editor understands the entire project structure. This is why AI tools like Claude can give context-aware suggestions—they see the whole picture, not just one file. Workspaces are how developers organize work and maintain boundaries between different projects.
+                </p>
+                <p style="font-style: italic; color: #f57c00;">
+                    <strong>Analogy:</strong> A workspace is like a war room for a specific initiative—all blueprints, contracts, and resources for that project organized in one place.
+                </p>
+            </div>
+
+            <div class="context-item">
+                <h3><span class="icon">⌨️</span> Terminal / CLI</h3>
+                <p>
+                    <strong>What it is:</strong> A text-based interface for giving direct commands to your computer—no mouse, no graphics, just typed instructions.
+                </p>
+                <p>
+                    <strong>Why it matters:</strong> The terminal is how developers run commands efficiently and automate repetitive tasks. When your team mentions "CI/CD pipelines," "deployment scripts," or "running tests," they're often describing terminal commands running automatically. Common commands include <code>cd</code> (change directory), <code>ls</code> (list files), and <code>git</code> (version control).
+                </p>
+                <p style="font-style: italic; color: #f57c00;">
+                    <strong>Analogy:</strong> The terminal is like texting your computer instead of tapping through apps—direct communication with no middleman interface.
+                </p>
             </div>
         </div>
 
