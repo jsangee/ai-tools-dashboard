@@ -174,10 +174,12 @@
         }
 
         .nav-logo {
-            width: 24px;
-            height: 24px;
+            width: 28px;
+            height: 28px;
             object-fit: contain;
-            filter: brightness(0) invert(1);
+            background: white;
+            border-radius: 6px;
+            padding: 4px;
         }
 
         .nav-button:hover {
@@ -399,30 +401,30 @@
 
         <nav class="nav-grid">
             <a href="#vscode" class="nav-button">
-                <img src="https://code.visualstudio.com/assets/images/code-stable.png" alt="" class="nav-logo">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/9/9a/Visual_Studio_Code_1.35_icon.svg" alt="" class="nav-logo" onerror="this.style.display='none'">
                 VS Code
             </a>
             <a href="#salesforce-cli" class="nav-button">
-                <img src="https://developer.salesforce.com/resources2/quiddity/images/salesforce-logo.svg" alt="" class="nav-logo">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/f/f9/Salesforce.com_logo.svg" alt="" class="nav-logo" onerror="this.style.display='none'">
                 Salesforce CLI
             </a>
             <a href="#cursor" class="nav-button">
-                <img src="https://www.cursor.com/brand/icon.svg" alt="" class="nav-logo">
+                <img src="https://avatars.githubusercontent.com/u/142926960" alt="" class="nav-logo" onerror="this.style.display='none'">
                 Cursor
             </a>
             <a href="#claude" class="nav-button">
-                <img src="https://cdn.jsdelivr.net/gh/walkxcode/dashboard-icons/svg/claude-ai.svg" alt="" class="nav-logo">
+                <img src="https://avatars.githubusercontent.com/u/62835101" alt="" class="nav-logo" onerror="this.style.display='none'">
                 Claude
             </a>
             <a href="#salesforce-claude" class="nav-button">
-                <img src="https://developer.salesforce.com/resources2/quiddity/images/salesforce-logo.svg" alt="" class="nav-logo">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/f/f9/Salesforce.com_logo.svg" alt="" class="nav-logo" onerror="this.style.display='none'">
                 Salesforce + Claude
             </a>
         </nav>
 
         <!-- VS Code Section -->
         <div class="tool-card" id="vscode">
-            <h2><img src="https://code.visualstudio.com/assets/images/code-stable.png" alt="VS Code" class="tool-logo"> VS Code (Visual Studio Code)</h2>
+            <h2><img src="https://upload.wikimedia.org/wikipedia/commons/9/9a/Visual_Studio_Code_1.35_icon.svg" alt="VS Code" class="tool-logo" onerror="this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22%3E%3Ctext y=%22.9em%22 font-size=%2290%22%3E💻%3C/text%3E%3C/svg%3E'"> VS Code (Visual Studio Code)</h2>
             <div class="one-liner">
                 A free, powerful text editor that's become the industry standard for writing and managing code.
             </div>
@@ -448,7 +450,7 @@
 
         <!-- Salesforce CLI Section -->
         <div class="tool-card" id="salesforce-cli">
-            <h2><img src="https://developer.salesforce.com/resources2/quiddity/images/salesforce-logo.svg" alt="Salesforce" class="tool-logo"> Salesforce CLI (sf / sfdx)</h2>
+            <h2><img src="https://upload.wikimedia.org/wikipedia/commons/f/f9/Salesforce.com_logo.svg" alt="Salesforce" class="tool-logo" onerror="this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22%3E%3Ctext y=%22.9em%22 font-size=%2290%22%3E☁️%3C/text%3E%3C/svg%3E'"> Salesforce CLI (sf / sfdx)</h2>
             <div class="one-liner">
                 A command-line tool that lets developers interact with Salesforce orgs directly from their terminal—no clicking through the web interface.
             </div>
@@ -474,7 +476,7 @@
 
         <!-- Cursor Section -->
         <div class="tool-card" id="cursor">
-            <h2><img src="https://www.cursor.com/brand/icon.svg" alt="Cursor" class="tool-logo"> Cursor</h2>
+            <h2><img src="https://avatars.githubusercontent.com/u/142926960" alt="Cursor" class="tool-logo" onerror="this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22%3E%3Ctext y=%22.9em%22 font-size=%2290%22%3E✨%3C/text%3E%3C/svg%3E'"> Cursor</h2>
             <div class="one-liner">
                 An AI-powered code editor built on VS Code that lets you code by having conversations with AI.
             </div>
@@ -500,7 +502,7 @@
 
         <!-- Claude Section -->
         <div class="tool-card" id="claude">
-            <h2><img src="https://cdn.jsdelivr.net/gh/walkxcode/dashboard-icons/svg/claude-ai.svg" alt="Claude" class="tool-logo"> Claude</h2>
+            <h2><img src="https://avatars.githubusercontent.com/u/62835101" alt="Claude" class="tool-logo" onerror="this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22%3E%3Ctext y=%22.9em%22 font-size=%2290%22%3E🤖%3C/text%3E%3C/svg%3E'"> Claude</h2>
             <div class="one-liner">
                 An AI assistant that understands context, writes code, analyzes data, and helps solve complex problems through conversation.
             </div>
@@ -526,7 +528,7 @@
 
         <!-- Salesforce Claude Strategy Section -->
         <div class="tool-card" id="salesforce-claude">
-            <h2><img src="https://developer.salesforce.com/resources2/quiddity/images/salesforce-logo.svg" alt="Salesforce" class="tool-logo"> How Salesforce Wants You to Use Claude</h2>
+            <h2><img src="https://upload.wikimedia.org/wikipedia/commons/f/f9/Salesforce.com_logo.svg" alt="Salesforce" class="tool-logo" onerror="this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22%3E%3Ctext y=%22.9em%22 font-size=%2290%22%3E🏢%3C/text%3E%3C/svg%3E'"> How Salesforce Wants You to Use Claude</h2>
             <div class="one-liner">
                 Salesforce is making Claude available to everyone—not just engineers—but through your IDE, not as a standalone app.
             </div>
@@ -564,7 +566,7 @@
             <h2>📚 Additional Context: Foundational Concepts</h2>
 
             <div class="context-item">
-                <h3><img src="https://code.visualstudio.com/assets/images/code-stable.png" alt="Workspace" class="context-logo"> Workspace</h3>
+                <h3><img src="https://upload.wikimedia.org/wikipedia/commons/9/9a/Visual_Studio_Code_1.35_icon.svg" alt="Workspace" class="context-logo" onerror="this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22%3E%3Ctext y=%22.9em%22 font-size=%2290%22%3E📁%3C/text%3E%3C/svg%3E'"> Workspace</h3>
                 <p>
                     <strong>What it is:</strong> An organized folder containing all the files, code, and resources for a specific project—your project's home base.
                 </p>
@@ -577,7 +579,7 @@
             </div>
 
             <div class="context-item">
-                <h3><img src="https://upload.wikimedia.org/wikipedia/commons/d/d8/Antu_utilities-terminal.svg" alt="Terminal" class="context-logo"> Terminal / CLI</h3>
+                <h3><img src="https://upload.wikimedia.org/wikipedia/commons/d/d8/Antu_utilities-terminal.svg" alt="Terminal" class="context-logo" onerror="this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22%3E%3Ctext y=%22.9em%22 font-size=%2290%22%3E⌨️%3C/text%3E%3C/svg%3E'"> Terminal / CLI</h3>
                 <p>
                     <strong>What it is:</strong> A text-based interface for giving direct commands to your computer—no mouse, no graphics, just typed instructions.
                 </p>
